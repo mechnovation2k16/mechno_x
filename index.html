@@ -2,6 +2,30 @@
 <html>
 <head>
 <title>Mechnovation 2k16 - The Official Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top - 70
+      }, 1500, function(){
+      });
+    } // End if
+  });
+});
+</script>
 <style>
 body {
     background-image: url("bg.jpg");
@@ -59,7 +83,8 @@ body {
 
 div.wrapper {
     width: 96%;
-    margin: 10px 2% 0;
+    margin: 0px 2% 0;
+	padding: 50px 0px 0px 0px;
     background: rgba(0, 0, 0, 0.7);
     overflow:hidden;
     border-radius:20px;
@@ -70,6 +95,9 @@ div.menu {
     background-size:cover;
 	background-attachment:fixed;
 	border-bottom: solid red;
+	width:100%;
+	position:fixed;
+	z-index:150;
 }
 
 div.menut {
@@ -109,7 +137,7 @@ img.mlogo {
 	max-height:80px;
 	width:auto;
 	height:auto;
-	padding: 10px 10px 10px 10px;
+	padding: 10px 10px 0px 10px;
 
 }   
 
@@ -313,7 +341,7 @@ div.blink {
         	</div>
 
         	<div class="menut">
-        	<a href="#Contact+Us" style="color: red; text-decoration: none;">Contact Us</a>
+        	<a href="#Contact" style="color: red; text-decoration: none;">Contact Us</a>
         	</div>
 
 			<div class="menut">
@@ -335,9 +363,11 @@ div.blink {
 			
 </div>
 
+<br><br><br>
+
 <div class="wrapper">
 
-        <br><br><br>
+        <br><br>
 
         <div class='mainlogo'>
         <img src="logo.png">
@@ -368,7 +398,8 @@ div.blink {
         	<div class='noticed'>
         	<ul><li>A uniform registration fee of <span style="font-family:Times; font-size:30px;">&#8377;</span>300 is mandatory for all participants. The registration fee includes participation for any six events (non-overlapping) and food expenses for both the days. An additional fees of <span style="font-family:Times; font-size:30px;">&#8377;</span>150 is required for participation in more than six events.</li><br>
 			<li>Paper Presentation, Project Presentation and Death Race will have individual registration fees, depending on the event. These events won't come under the <span style="font-family:Times; font-size:30px;">&#8377;</span>300 registration fees. Hence, students attending these events would have to register individually.</li><br>
-			<li><a href="web/viewer.html?file=ES.pdf" target="_blank" style="color:red;">View the event schedule.</a> Click <a href="\web\ES.pdf" target="_blank" style="color:red;" download="Event Schedule">here</a> to download. The event schedule is susceptible to changes. Any changes would be previously announced through mail or in the website.</li><br>
+			<li>A one-day workshop on <u>Recent Trends in Heavy Commercial Vehicles</u> has been scheduled on September 22. Register <a href="https://goo.gl/forms/gS9js7f5zemt3bL92" style="color:red">here</a>.</li><br>
+			<li style="color:orange;"><a href="/web/viewer.html?file=ES.pdf" target="_blank" style="color:orange;">View the event schedule.</a></li><br>
 			<li>Registration for all the events has begun! Refer below to register.</li>
         	</ul><br>
         	</div>
@@ -376,6 +407,90 @@ div.blink {
         	</div>
 
         <div style="border-bottom: solid red; padding: 0px 10px 0px 10px;"></div>
+		
+		<div class="events" id="Workshop">
+			
+			<div class='eventst'>
+        	<u>Workshops:&nbsp&nbsp&nbsp&nbsp</u>
+        	</div>
+			
+			<div class="eventst" style=" width:87%; text-align:right; font-size:12px; margin: 0px 3% 10px 8%;">(Click to expand)</div>
+
+			<div class="container">
+    			<div class="header"><u>1. Recent Trends in Heavy Commercial Vehicles&nbsp&nbsp&nbsp&nbsp </u><br>
+    			</div>
+    
+				<div class="content">
+		
+				<div style="width:100%; display:inline-block;">
+					<div style="float:left; max-width:50%; width:auto; height:auto;padding: 50px 0px 0px 0px;">
+						<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 5px 0px 5px 20px;"><u>Field:&nbsp</u>&nbsp&nbsp Automobile Engineering</div>
+						<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Workshop:&nbsp&nbsp&nbsp&nbsp</u></div>
+        			</div>
+					<div style="float:right; max-width:30%; width:auto; height:auto; text-align:right;">
+						<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 5px 20px 5px 20px;"><u>Conducted by:&nbsp</u>&nbsp&nbsp</div>
+						<img src="icons/w2_s.png" style="max-width:150px; width:auto; height:auto; display: inline-block;">
+				</div>
+					<div style="width:100%; display:inline-block;">
+						<div style="float:left; max-width:20%; width:auto; height:auto; text-align: center; margin:5% 5.5% 0px 5%;">
+						<img src="icons/w2.png" style="max-width:150px; width:auto; height:auto; display: inline-block;">
+						</div>
+						<div style="width:60%; margin:2% 0px 0px 5%; float:left; font-size: 25px;">
+						<u>Prelude:&nbsp&nbsp</u><br><ul style="list-style-type:none; font-size:20px;"><li>&nbsp&nbsp&nbsp&nbsp&nbsp Heavy Vehicles (HCVs) form an indispensable part of the Indian Automobile Industry. In fact, one can say that heavy vehicles are the backbone of the transportation of the major economical goods, like sand, rice, wood, steel and so on. Know what runs India's major economy around, the slow yet largest stakeholder, how time, engineering and resources all play inevitable roles!</li></ul>
+						</div>
+	
+				</div>
+				<div style="width:100%; display:inline-block;">
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 20px 0px 5px 20px;"><u>Date:&nbsp</u>&nbsp&nbsp September 22, 2016</div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Time:&nbsp</u>&nbsp&nbsp 9 AM to 4 PM</div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Registration Fee:&nbsp</u>&nbsp&nbsp<span style="font-family:Times; font-size:20px;">&#8377;</span>600 (includes food and refreshments)<br></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Speakers:&nbsp&nbsp&nbsp&nbsp</u></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; color: red; padding: 5px 0px 5px 30px; font-size:18px;"> <ul><li>D.B.Sriprakash, Manager, Power Train Department, Hindhuja Groups, Ashok Leyland Pvt. Ltd.</li></ul></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Payment Details:&nbsp</u>&nbsp&nbsp The fee of <span style="font-family:Times; font-size:20px;">&#8377;</span>600 is to be deposited to <b>Ac. No. 610991757 (Indian Bank), Bank IFSC code:IDIB000S107 (Peelamedu Branch)</b> as soon as possible. <b>On-spot payment and on-spot registration </b>is also available.<br></div>
+				</div>
+				<div class="blink">
+				<span style="color:red; font-size:30px; text-decoration: underline;"><a href="https://goo.gl/forms/gS9js7f5zemt3bL92" style="color:red;">&nbsp&nbspRegister Now!&nbsp&nbsp</a></span><br><br>
+				</div>
+    			</div>
+            </div>
+			</div>
+			
+			<div class="container">
+    			<div class="header"><u>2. Design, Fabrication, Control of Hypersonic Aircrafts and Recent Trends in Aeronautics <span style="color:orange;">(Completed)</span>&nbsp&nbsp&nbsp&nbsp </u><br>
+    			</div>
+    
+				<div class="content">
+		
+				<div style="width:100%; display:inline-block;">
+					<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 5px 0px 5px 20px;"><u>Field:&nbsp</u>&nbsp&nbsp Aerospace Engineering</div>
+					<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Workshop:&nbsp&nbsp&nbsp&nbsp</u></div>
+        			<div style="float:left; max-width:20%; width:auto; height:auto; text-align: center; margin:5% 5.5% 0px 5%;">
+					<img src="icons/w1.png" style="max-width:150px; width:auto; height:auto; display: inline-block;">
+					</div>
+					<div style="width:60%; margin:2% 0px 0px 5%; float:left; font-size: 25px;">
+					<u>Prelude:&nbsp&nbsp</u><br><ul style="list-style-type:none; font-size:20px;"><li>&nbsp&nbsp&nbsp&nbsp&nbsp The development in the aerospace industry has always been in the form of the race for higher speeds and lower chances of failure at extreme speeds. With hypersonic aircrafts, there are various unforeseeable parameters and loopholes, which may pose difficulties, before, during and after the operation. Hence, all the aspects involving hypersonic aircrafts must be insusceptible to human errors.</li></ul>
+					</div>
+				</div>
+				<div style="width:100%; display:inline-block;">
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 20px 0px 5px 20px;"><u>Date:&nbsp</u>&nbsp&nbsp September 3, 2016</div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Time:&nbsp</u>&nbsp&nbsp 9 AM to 4 PM</div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Registration Fee:&nbsp</u>&nbsp&nbsp<span style="font-family:Times; font-size:20px;">&#8377;</span>600 (includes food and refreshments)<br></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Speakers:&nbsp&nbsp&nbsp&nbsp</u></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; color: red; padding: 5px 0px 5px 30px; font-size:18px;"> <ul><li><u style="font-size:20px;">Forenoon:&nbsp&nbsp Design, Fabrication, Control of Hypersonic Aircrafts</u><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp Dr. S. Elangovan, Professor and Dean of the Department of Aeronautical Engineering, Bharath University, is a prominent figure in the research of supersonic and hypersonic vehicles in India. He has several DRDO-funded research projects under his name. He has nearly 30 years of experience teaching the subject to young minds and around 10 years of experience as a research scientist. He has published several papers in top international journals and has been the key figure in numerous conferences. Currently, he is involved in an indigenous research project sponsored by the DRDO.</li><br>
+				<li><u style="font-size:20px;">Afternoon:&nbsp&nbsp Recent Trends in Aeronautics</u><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp Prof. V. Kanagarajan, F. AeSI, is a leading research enthusiast in the field of Experimental Aerodynamics. He has several accolades to his name, related with Aerospace and Aeronautical Engineering, having served as the Chairman of AeSI (Aero Society of India - Chennai Branch). He was a former Director Grade Scientist of top government funded projects at NTAF, under NAL, Bangalore. Furthermore, he was the former holder of the prestigious KAVP Memorial AR & DB Chair and is the current holder of Prof. KAV. Pandalai Chair at MIT, Chennai.</li> </ul></div>
+				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Payment Details:&nbsp</u>&nbsp&nbsp The fee of <span style="font-family:Times; font-size:20px;">&#8377;</span>600 is to be deposited to <b>Ac. No. 610991757 (Indian Bank), Bank IFSC code:IDIB000S107 (Peelamedu Branch)</b> as soon as possible. <b>On-spot payment and on-spot registration </b>is also available.<br></div>
+				</div>
+				<div class="blink">
+				<span style="color:red; font-size:30px; text-decoration: underline;">Event has ended.</span>
+				</div>
+    			</div>
+            </div>
+		</div>
+		
+		     <div style="border-bottom: solid red; padding: 0px 10px 0px 10px;"></div>
+
+		
+
 		
 		
 
@@ -850,57 +965,14 @@ div.blink {
 			
 		<br><br>
 		<div style="color:red; width:100%; display: inline-block; text-align:center; font-size:20px; font-family:'Oswald Light', 'PT Sans Narrow', serif; margin: 20px 0px 10px 0px;">
-				And more fun events to be announced on-spot...
+				And yet more coming soon...
 				</div>
 		</div>
 		
 		 <div style="border-bottom: solid red; padding: 0px 10px 0px 10px;"></div>
 		 
-		 <div class="events" id="Workshop">
-			
-			<div class='eventst'>
-        	<u>Workshops:&nbsp&nbsp&nbsp&nbsp</u>
-        	</div>
-			
-			<div class="eventst" style=" width:87%; text-align:right; font-size:12px; margin: 0px 3% 10px 8%;">(Click to expand)</div>
-
-			<div class="container">
-    			<div class="header"><u>1. Design, Fabrication, Control of Hypersonic Aircrafts and Recent Trends in Aeronautics (Completed)&nbsp&nbsp&nbsp&nbsp </u><br>
-    			</div>
-    
-				<div class="content">
-		
-				<div style="width:100%; display:inline-block;">
-					<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 5px 0px 5px 20px;"><u>Field:&nbsp</u>&nbsp&nbsp Aerospace Engineering</div>
-					<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Workshop:&nbsp&nbsp&nbsp&nbsp</u></div>
-        			<div style="float:left; max-width:20%; width:auto; height:auto; text-align: center; margin:5% 5.5% 0px 5%;">
-					<img src="icons/w1.png" style="max-width:150px; width:auto; height:auto; display: inline-block;">
-					</div>
-					<div style="width:60%; margin:2% 0px 0px 5%; float:left; font-size: 25px;">
-					<u>Prelude:&nbsp&nbsp</u><br><ul style="list-style-type:none; font-size:20px;"><li>&nbsp&nbsp&nbsp&nbsp&nbsp The development in the aerospace industry has always been in the form of the race for higher speeds and lower chances of failure at extreme speeds. With hypersonic aircrafts, there are various unforeseeable parameters and loopholes, which may pose difficulties, before, during and after the operation. Hence, all the aspects involving hypersonic aircrafts must be insusceptible to human errors.</li></ul>
-					</div>
-				</div>
-				<div style="width:100%; display:inline-block;">
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 20px 0px 5px 20px;"><u>Date:&nbsp</u>&nbsp&nbsp September 3, 2016</div>
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Time:&nbsp</u>&nbsp&nbsp 9 AM to 4 PM</div>
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Registration Fee:&nbsp</u>&nbsp&nbsp<span style="font-family:Times; font-size:20px;">&#8377;</span>600 (includes food and refreshments)<br></div>
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 25px; color: red; padding: 5px 0px 5px 20px;"><u>About the Speakers:&nbsp&nbsp&nbsp&nbsp</u></div>
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; color: red; padding: 5px 0px 5px 30px; font-size:18px;"> <ul><li><u style="font-size:20px;">Forenoon:&nbsp&nbsp Design, Fabrication, Control of Hypersonic Aircrafts</u><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp Dr. S. Elangovan, Professor and Dean of the Department of Aeronautical Engineering, Bharath University, is a prominent figure in the research of supersonic and hypersonic vehicles in India. He has several DRDO-funded research projects under his name. He has nearly 30 years of experience teaching the subject to young minds and around 10 years of experience as a research scientist. He has published several papers in top international journals and has been the key figure in numerous conferences. Currently, he is involved in an indigenous research project sponsored by the DRDO.</li><br>
-				<li><u style="font-size:20px;">Afternoon:&nbsp&nbsp Recent Trends in Aeronautics</u><br><br>&nbsp&nbsp&nbsp&nbsp&nbsp Prof. V. Kanagarajan, F. AeSI, is a leading research enthusiast in the field of Experimental Aerodynamics. He has several accolades to his name, related with Aerospace and Aeronautical Engineering, having served as the Chairman of AeSI (Aero Society of India - Chennai Branch). He was a former Director Grade Scientist of top government funded projects at NTAF, under NAL, Bangalore. Furthermore, he was the former holder of the prestigious KAVP Memorial AR & DB Chair and is the current holder of Prof. KAV. Pandalai Chair at MIT, Chennai.</li> </ul></div>
-				<div style="font-family: 'Oswald Light', 'PT Sans Narrow', serif; font-size: 20px; color: red; padding: 2px 0px 5px 20px;"><u>Payment Details:&nbsp</u>&nbsp&nbsp The fee of <span style="font-family:Times; font-size:20px;">&#8377;</span>600 is to be deposited to <b>Ac. No. 610991757 (Indian Bank), Bank IFSC code:IDIB000S107 (Peelamedu Branch)</b> as soon as possible. <b>On-spot payment and on-spot registration </b>is also available.<br></div>
-				</div>
-				<div class="blink">
-				<span style="color:red; font-size:30px; text-decoration: underline;">Event has ended.</span>
-				</div>
-    			</div>
-            </div>
-		</div>
-		
-		     <div style="border-bottom: solid red; padding: 0px 10px 0px 10px;"></div>
-
-		
-
-       		<div class='contact' id="Contact+Us">
+		 
+       		<div class='contact' id="Contact">
 
         	<div class='contactt'>
         		<u> Contact Us:&nbsp&nbsp&nbsp </u>
@@ -920,12 +992,30 @@ div.blink {
 </div>
 		<br>
         </div>
-
-        <div style="border-bottom: solid red;"></div>
+			
+		<div style="border-bottom: solid red; padding: 0px 10px 0px 10px;"></div>
 		
-</div>
-
-<br><br><br>
+		<div class="events">
+			
+			<div class='eventst'>
+        	<u>Our Sponsors:&nbsp&nbsp&nbsp&nbsp</u>
+        	</div>
+			
+			<div class='mainlogo'>
+        	<img src="sponsors.png">
+        	</div>
+			
+			<div class=contactt style="text-decoration:underline; text-align:center; font-size:20px; margin:0px 0px 10px 0px;">
+			&nbsp&nbsp Our Official Media Partner&nbsp&nbsp
+			</div>
+			
+			<div class='mainlogo'>
+        	<a href="https://www.brainbuxa.com/" target="_blank"><img src="brainbox.png" style="max-width:200px;"></a>
+        	</div>
+	</div>	
+		
+		
+</div><br>
 
 <div style="text-align: right; font-family: 'Oswald',serif; font-size:14px; color:red;background: rgba(0, 0, 0, 0.8); border-top: solid red; background-size:cover; background-attachment:fixed; padding: 10px 14px 0px 0px;" >
     	
